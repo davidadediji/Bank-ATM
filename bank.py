@@ -4,6 +4,9 @@ class BankAtm():
 	def __init__(self, owner, balance):
 		self.owner = owner
 		self.balance = balance
+	
+	def __str__(self):
+		return f"Owner: {self.owner}\nCurrent Balance: {self.balance}"
 
 	def deposit(self, amount_deposited):
 		
@@ -20,7 +23,7 @@ class BankAtm():
 			return "funds unavaliable"
 
 p = BankAtm('david', 100)
-
+print(p)
 print(p.deposit(50))
 print(p.balance)
 print(p.withdraw(155))
